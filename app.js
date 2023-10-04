@@ -48,7 +48,7 @@ function writeScore() {
 }
 
 function createSquare(x, y) {
-  gameAreaContext.fillStyle = '#000000';
+  gameAreaContext.fillStyle = '#b5b5b5';
   gameAreaContext.fillRect(x * cellWidth, y * cellWidth, cellWidth, cellWidth);
 }
 
@@ -56,10 +56,10 @@ function createGameArea() {
   var snakeX = snake[0].x;
   var snakeY = snake[0].y;
 
-  gameAreaContext.fillStyle = '#FFFFFF';
+  gameAreaContext.fillStyle = '#2a2b2b';
   gameAreaContext.fillRect(0, 0, gameAreaWidth, gameAreaHeight);
 
-  gameAreaContext.strokeStyle = '#000000';
+  gameAreaContext.strokeStyle = '#b5b5b5';
   gameAreaContext.strokeRect(0, 0, gameAreaWidth, gameAreaHeight);
 
   if (snakeDirection == 'right') {
