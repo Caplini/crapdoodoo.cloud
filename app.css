@@ -3,6 +3,13 @@ body {
     margin: 20px auto;
     text-align: center;
     font-size: 150%;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background-color: #0c0c0c;
   }
   
   input {
