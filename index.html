@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-  <title>JavaScript Snake Game</title>
-  <link rel="stylesheet" href="app.css" />
-  <meta property="og:image" content="https://crapdoodoo.cloud/pumkin.jpg">
-</head>
+<html>
+    <head>
+        <title>
+            PACMAN - Made for Fun By Roshan Lamichhane
+        </title>
+    </head>
+    
+    <body>
+        <canvas id="myCanvas" align="center" width="510" height="510">
+        </canvas>
+        
+        <style>
+            
+    canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 510px;
+    }
+        </style>
+        
+        <script type="text/javascript" src="./js/pacman.js"></script>
+        <script type="text/javascript" src="./js/ghost.js"></script>
+        <script type="text/javascript" src="./js/grid.js"></script>
+        <script type="text/javascript" src="./js/game.js"></script>
+    </body>
 
-<body>
-    Speed: <input type="number" id="gameSpeed" value="5" min="1" max="9" step="1" />
-    <input type="button" value="Start" id="gameStart" />
-    <br /> <br />
-    <canvas id="gameArea"></canvas>
-    <script src="app.js"></script>
-    <h1>CrapDooDoo.cloud</h1>
-</body>
+</html>
