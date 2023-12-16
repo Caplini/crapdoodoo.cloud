@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (coins >= backpackUpgradeCost) {
             coins -= backpackUpgradeCost;
             backpackCapacity *= 1.5;
-            backpackUpgradeCost *= 1.3;
+            backpackUpgradeCost *= 1.6;
             updateBackpackDisplay();
             updateShopDisplay();
             saveGameState();
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const upgradeMultiplier = () => {
         if (coins >= multiplierUpgradeCost) {
             coins -= multiplierUpgradeCost;
-            coinMultiplier *= 0.1;
+            coinMultiplier *= 0.2;
             multiplierUpgradeCost *= 1.3;
             updateShopDisplay();
             saveGameState();
