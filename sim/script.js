@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const upgradeBackpack = () => {
         if (coins >= backpackUpgradeCost) {
             coins -= backpackUpgradeCost;
-            backpackCapacity += 10;
+            backpackCapacity *= 1.5;
             backpackUpgradeCost *= 1.3;
             updateBackpackDisplay();
             updateShopDisplay();
