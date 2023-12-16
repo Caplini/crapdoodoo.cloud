@@ -5,7 +5,7 @@ let posX = 392.5; // Default X position, will be overwritten if saved value exis
 let posY = 584;   // Default Y position, will be overwritten if saved value exists
 let backpackCapacity = 100; // Initialize backpack capacity
 let backpackUpgradeCost = 100;
-let multiplierUpgradeCost = 35;
+let multiplierUpgradeCost = 50;
 let coinMultiplier = 1;
 
 // Function to save the game state to local storage
