@@ -4,8 +4,8 @@ let coins = 0;
 let posX = 392.5; // Default X position, will be overwritten if saved value exists
 let posY = 584;   // Default Y position, will be overwritten if saved value exists
 let backpackCapacity = 100; // Initialize backpack capacity
-let backpackUpgradeCost = 10;
-let multiplierUpgradeCost = 15;
+let backpackUpgradeCost = 100;
+let multiplierUpgradeCost = 35;
 let coinMultiplier = 1;
 
 // Function to save the game state to local storage
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (coins >= backpackUpgradeCost) {
             coins -= backpackUpgradeCost;
             backpackCapacity += 10;
-            backpackUpgradeCost *= 2;
+            backpackUpgradeCost *= 1.3;
             updateBackpackDisplay();
             updateShopDisplay();
             saveGameState();
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (coins >= multiplierUpgradeCost) {
             coins -= multiplierUpgradeCost;
             coinMultiplier += 0.1;
-            multiplierUpgradeCost *= 2;
+            multiplierUpgradeCost *= 1.3;
             updateShopDisplay();
             saveGameState();
         }
