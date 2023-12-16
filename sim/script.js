@@ -27,8 +27,8 @@ const loadGameState = () => {
     posX = parseFloat(localStorage.getItem('posX') || '392.5');
     posY = parseFloat(localStorage.getItem('posY') || '584');
     backpackCapacity = parseInt(localStorage.getItem('backpackCapacity') || '100', 10);
-    backpackUpgradeCost = parseInt(localStorage.getItem('backpackUpgradeCost') || '10', 10);
-    multiplierUpgradeCost = parseInt(localStorage.getItem('multiplierUpgradeCost') || '15', 10);
+    backpackUpgradeCost = parseInt(localStorage.getItem('backpackUpgradeCost') || '100', 10);
+    multiplierUpgradeCost = parseInt(localStorage.getItem('multiplierUpgradeCost') || '50', 10);
     coinMultiplier = parseFloat(localStorage.getItem('coinMultiplier') || '1');
 };
 
