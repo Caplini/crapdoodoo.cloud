@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const upgradeMultiplier = () => {
         if (coins >= multiplierUpgradeCost) {
             coins -= multiplierUpgradeCost;
-            coinMultiplier += 0.1;
+            coinMultiplier *= 0.1;
             multiplierUpgradeCost *= 1.3;
             updateShopDisplay();
             saveGameState();
