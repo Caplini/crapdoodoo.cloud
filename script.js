@@ -14,28 +14,28 @@ function setupInput() {
 
 async function handleInput(e) {
   switch (e.key) {
-    case "ArrowUp":
+    case "w":
       if (!canMoveUp()) {
         setupInput()
         return
       }
       await moveUp()
       break
-    case "ArrowDown":
+    case "s":
       if (!canMoveDown()) {
         setupInput()
         return
       }
       await moveDown()
       break
-    case "ArrowLeft":
+    case "a":
       if (!canMoveLeft()) {
         setupInput()
         return
       }
       await moveLeft()
       break
-    case "ArrowRight":
+    case "d":
       if (!canMoveRight()) {
         setupInput()
         return
