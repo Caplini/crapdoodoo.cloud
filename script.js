@@ -10,6 +10,53 @@ setupInput()
 
 function setupInput() {
   window.addEventListener("keydown", handleInput, { once: true })
+
+  // Touch events
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  const minSwipeDistance = 30; // Minimum distance for a swipe to be detected
+
+  gameBoard.addEventListener("touchstart", function(e) {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+  }, false);
+
+  gameBoard.addEventListener("touchend", function(e) {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+  }, false);
+
+  function handleSwipe() {
+    const dx = touchEndX - touchStartX;
+    const dy = touchEndY - touchStartY;
+    const absDx = Math.abs(dx);
+    const absDy = Math.abs(dy);
+
+    if (Math.max(absDx, absDy) < minSwipeDistance) {
+      setupInput();
+      return;
+    }
+
+    if (absDx > absDy) {
+      // Horizontal swipe
+      if (dx > 0) {
+        handleInput({ key: "d" });
+      } else {
+        handleInput({ key: "a" });
+      }
+    } else {
+      // Vertical swipe
+      if (dy > 0) {
+        handleInput({ key: "s" });
+      } else {
+        handleInput({ key: "w" });
+      }
+    }
+  }
 }
 
 async function handleInput(e) {
